@@ -11,6 +11,9 @@ import UseEffectThree from './Components/useEffectThree';
 import UseEffectFour from './Components/UseEffectFour';
 import SingleProduct from './Components/SingleProduct';
 import MultipleProduct from './Components/MultipleProduct';
+import Props from './Components/Props';
+import StateEffect from './Components/StateEffect';
+
 
 function App() {
   return (
@@ -27,6 +30,8 @@ function App() {
       <Route exact path = '/effect-4' element ={<UseEffectFour/>}/>
       <Route exact path ='/SingleProduct/:id' element={<SingleProduct/>}/>
       <Route exact path ='/MultipleProduct' element={<MultipleProduct/>}/>
+      <Route exact path ='/props' element={<Props/>}/>
+      <Route exact path ='/stateeffect' element={<StateEffect/>}/>
 
       </Routes>
       
