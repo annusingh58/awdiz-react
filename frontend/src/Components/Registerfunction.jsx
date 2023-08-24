@@ -59,7 +59,7 @@ const Registerfunction = () => {
                         <input type="submit" value="Registerfunction" /><br />
 
                     </form>
-                    <button onClick={() => router('/login')}>Click here to go Login</button>
+                    <button onClick={() => router('/loginfunction')}>Click here to go Login</button>
 
                 </div>
             </>

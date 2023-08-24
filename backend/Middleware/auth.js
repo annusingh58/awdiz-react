@@ -24,7 +24,7 @@ export const loginchk=async(req,res,next)=>{
           next();
      
         }catch (error) {
-        return res.status(500).json({status:500,sucess:false,message:error})
+        return res.status(500).json({status:500,success:false,message:error})
         
         }
 }

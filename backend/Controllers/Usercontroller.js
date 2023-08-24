@@ -24,14 +24,16 @@ export const login =async(req,res)=>{
         if(!email)return res.status(400).json({status:400,success:false,message:"email is required"});
         if(!password)return res.status(400).json({status:400,success:false,message:"password is required"});
         
-        const response = await USER.find({email}).exec();
+        const response = await USER.findOne({email}).exec();
         if(!response) return res.status(400).json({status: 400,success:false, message: "email not exits"});
         
-        if(response[0].email==email && password)
+        if(response.email==email && response.password==password){
         return res.status(200).json({status:200,success:true,message:"login sucessfully"})
-       
+        }else{
+            return res.status(500).json({status:500,success:false,message:"Credentials not matched"});
+        }
  
     } catch (error) {
-        return res.status(500).json({stastus:500,success:false,message:"error"});
+        return res.status(500).json({status:500,success:false,message:"error"});
     }
 }
