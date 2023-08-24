@@ -16,6 +16,8 @@ import StateEffect from './Components/StateEffect';
 import Mapping from './Components/Mapping';
 import { useState } from 'react';
 import DynamicStyle from './Components/DynamicStyle';
+import Registerfunction from './Components/Registerfunction';
+import Loginfunction from './Components/Loginfunction';
 
 
 function App() {
@@ -37,7 +39,9 @@ const [name,setName]=useState("Anu");
       <Route exact path ='/props' element={<Props/>}/>
       <Route exact path ='/stateeffect' element={<StateEffect/>}/>
       <Route exact path ='/mapping' element={<Mapping array={[{Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3u-buBVbZ4d0fDN9Mg7NqaguBYHypqlcibw&usqp=CAU",Name:"sky",Price:"64224"},{Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3u-buBVbZ4d0fDN9Mg7NqaguBYHypqlcibw&usqp=CAU",Name:"sky",Price:"64224"},{Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3u-buBVbZ4d0fDN9Mg7NqaguBYHypqlcibw&usqp=CAU",Name:"sky",Price:"64224"},{Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3u-buBVbZ4d0fDN9Mg7NqaguBYHypqlcibw&usqp=CAU",Name:"sky",Price:"64224"},{Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3u-buBVbZ4d0fDN9Mg7NqaguBYHypqlcibw&usqp=CAU",Name:"sky",Price:"64224"}]} />}/>
-    <Route exact path='/dynamicstyle' element={<DynamicStyle/>}/>
+      <Route exact path='/dynamicstyle' element={<DynamicStyle/>}/>
+      <Route exact path='/registration' element={<Registerfunction />}/>
+      <Route exact path='/loginfunction' element={<Loginfunction/>}/>
       </Routes>
       
 

@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import "../CSS/Register.css";
-import axios from "axios";
 
 function Register(){
     const router =useNavigate();
