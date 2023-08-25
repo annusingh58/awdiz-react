@@ -42,15 +42,15 @@ const Loginfunction=()=>{
 
 return(
     <>
-    <div>
-        <h1>Login Page</h1>
-        <form onSubmit={handleSubmit}>
-                        
+    <div className="h-screen w-screen bg-green-500 flex justify-center items-center ">
+        <form className="w-[400px] h-[450px] bg-orange-500 mt-10 p-7 rounded-xl" onSubmit={handleSubmit}>
+             <h1 className="font-bold text-5xl mb-5 text-black-600">Login Page</h1>
+           
           <label>Email</label><br />
-            <input type='text' name='email' onChange={handleChange} /><br />
+            <input className="w-full h-[40px] rounded-xl mb-4 mt-2" type='text' name='email' onChange={handleChange} /><br />
             <label>Password</label><br />
-            <input type='password' name='password' onChange={handleChange} /><br />
-            <input type="submit" value="Loginfunction" /><br />
+            <input className="w-full h-[40px] rounded-xl mb-4 mt-2" type='password' name='password' onChange={handleChange} /><br />
+            <input className="w-[120px] h-[40px] rounded-xl mb-4 mt-2 border-black border bg-blue-500 hover:border-blue-500 "type="submit" value="Loginfunction" /><br />
 
          </form>
     </div>
