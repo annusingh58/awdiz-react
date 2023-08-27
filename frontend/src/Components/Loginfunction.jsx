@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { AuthContext } from "./Context/AuthContext";
+import { json } from "react-router-dom";
 
 
 const Loginfunction=()=>{
-    const[userData,setUserData]=useState({email:"",password:""})
-
+    const[userData,setUserData]=useState({email:"",password:""});
+    const {state,dispatch}=useContext(AuthContext);
+    console.log(state);
     const router=useNavigate();
     console.log(userData,"userData");
 
@@ -22,8 +25,15 @@ const Loginfunction=()=>{
                 });
                 console.log(response,"response")
                 const data=response.data;
+
                 if(data.success){
+                    dispatch({
+                        type:"LOGIN",
+                        payload:data?.response
+                    });
+                    localStorage.setItem("JWTToken",JSON.stringify(data.token));
                     alert(data.message);
+                    router('/');
                 }
                 
             } catch (error) {

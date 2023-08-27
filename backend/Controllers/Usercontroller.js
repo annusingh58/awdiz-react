@@ -1,4 +1,7 @@
 import USER from "../Model/User.js";
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+dotenv.config();
 
 
 export const register=async(req,res)=>{
@@ -28,7 +31,11 @@ export const login =async(req,res)=>{
         if(!response) return res.status(400).json({status: 400,success:false, message: "email not exits"});
         
         if(response.email==email && response.password==password){
-        return res.status(200).json({status:200,success:true,message:"login sucessfully"})
+        
+        const jwtToken=process.env.JWT;
+        const token=jwt.sign({userId:response._id},jwtToken);
+
+        return res.status(200).json({status:200,success:true,message:"login sucessfully",token:token,response})
         }else{
             return res.status(500).json({status:500,success:false,message:"Credentials not matched"});
         }
