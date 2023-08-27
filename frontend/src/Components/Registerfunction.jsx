@@ -57,8 +57,8 @@ const Registerfunction = () => {
                         <input className='w-full h-[40px] rounded-xl mb-4 mt-2' type='password' name='password' onChange={handleChange} /><br />
                         <label>Confirm Password</label><br />
                         <input className='w-full h-[40px] rounded-xl mb-8 mt-2' type='password' name='confirmpassword' onChange={handleChange} /><br />
-                        <input className='w-[180px] rounded-xl h-[40px] border-black-800 border bg-black-700 text-white text-xl hover:bg-white hover:text-blue-700' type="submit" value="Registerfunction" /><br />
-                        <button className='w-[full] h-[40px] bg-orange-200 mt-5 rounded-xl ' onClick={() => router('/loginfunction')}>Click here to go Login</button>
+                        <input className='w-[180px] rounded-xl h-[40px] border-black-800 border bg-black-700 text-black text-xl hover:bg-slate-500 hover:text-black' type="submit" value="Registerfunction" /><br />
+                        <button className='w-[full] h-[40px] bg-orange-200 mt-5 rounded-xl hover:bg-slate-500 ' onClick={() => router('/loginfunction')}>Click here to go Login</button>
 
                     </form>
                     {/* <button className='w-full' onClick={() => router('/loginfunction')}>Click here to go Login</button> */}
