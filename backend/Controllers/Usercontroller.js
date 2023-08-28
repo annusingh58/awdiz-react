@@ -52,7 +52,7 @@ export const getcurrentuser=async(req,res)=>{
         const{token} =req.body;
         const dectoken =jwt.verify(token,process.env.JWT);
         const userId =dectoken.userId;
-        const user=await user.findById(userId);
+        const user=await USER.findById(userId);
 
         console.log(user);
         if(user){
