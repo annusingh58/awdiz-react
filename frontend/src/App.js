@@ -18,6 +18,9 @@ import { useState } from 'react';
 import DynamicStyle from './Components/DynamicStyle';
 import Registerfunction from './Components/Registerfunction';
 import Loginfunction from './Components/Loginfunction';
+import Memo from './Components/Memo';
+import Callback from './Components/Callback';
+import Todos from './Components/Todos';
 
 
 function App() {
@@ -42,6 +45,9 @@ const [name,setName]=useState("Anu");
       <Route exact path='/dynamicstyle' element={<DynamicStyle/>}/>
       <Route exact path='/registration' element={<Registerfunction />}/>
       <Route exact path='/loginfunction' element={<Loginfunction/>}/>
+      <Route exact path='/memo' element={<Memo/>}/>
+      <Route exact path='/callback' element={<Callback/>}/>
+      <Route exact path='/todos' element={<Todos/>}/>
       </Routes>
       
 
